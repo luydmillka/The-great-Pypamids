@@ -37,6 +37,13 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+@media screen and (min-width: 320px) {
+  .container {
+    width: 320px;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -84,7 +91,7 @@ header {
   margin-right: 93px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .header_item:not(:last-child) {
     margin-right: 10px;
   }
@@ -159,10 +166,11 @@ header {
 
 .quiz_header {
   font-size: 22px;
-  padding: 0px 80px 0px 80px;
+  padding: 0px 20px 0px 20px;
   text-align: center;
   font-weight: 600;
   line-height: 1.3em;
+  margin-bottom: 20px;
 }
 
 /*quiz*/
@@ -185,10 +193,14 @@ header {
   width: 100%;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .main_quiz {
     display: block;
     margin-bottom: 20px;
+  }
+  .quiz_header {
+    font-size: 18px;
+    text-align: justify;
   }
 }
 
