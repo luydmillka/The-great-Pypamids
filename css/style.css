@@ -1,0 +1,280 @@
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: rgb(22, 22, 22);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+/*header*/
+header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid orangered;
+}
+.header_container {
+  display: flex;
+  align-items: center;
+}
+.header_menu {
+  display: flex;
+  align-items: center;
+}
+
+.header_item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header_logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: orange;
+  margin-right: 93px;
+}
+
+@media screen and (min-width: 480px) {
+  .header_item:not(:last-child) {
+    margin-right: 10px;
+  }
+  .header_logo {
+    font-size: 18px;
+  }
+  .header_menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header_item:not(:last-child) {
+    margin-right: 20px;
+  }
+  .header_logo {
+    font-size: 22px;
+  }
+  .header_menu {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header_item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .header_logo {
+    font-size: 26px;
+  }
+}
+
+.header_link {
+  font-weight: 500;
+  line-height: 1.14;
+  color: gray;
+  transition: color 250ms var(--transit-function);
+}
+
+.header_link:hover {
+  color: orangered;
+  text-decoration: underline;
+}
+
+/*main*/
+.main_container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.main_header {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  margin-bottom: 30px;
+  color: rgb(170, 71, 35);
+}
+.main_info {
+  margin-bottom: 10px;
+  text-align: justify;
+  text-indent: 20px;
+  line-height: 1.3em;
+}
+
+.main_info:last-of-type {
+  margin-bottom: 50px;
+}
+
+.main_info_link {
+  color: orangered;
+}
+
+.quiz_header {
+  font-size: 22px;
+  padding: 0px 80px 0px 80px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.3em;
+}
+
+/*quiz*/
+.main_quiz {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.quiz_questions {
+  flex-basis: calc((100% - 90px) / 3);
+}
+
+.quiz_link {
+  display: block;
+  box-shadow: none;
+  transition: box-shadow 250ms var(--transit-function);
+}
+.quiz_img {
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .main_quiz {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main_quiz {
+    display: flex;
+    gap: 20px;
+  }
+  .quiz_questions {
+    flex-basis: calc((100% - 40px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main_quiz {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .quiz_questions {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+}
+
+.quiz_link:hover,
+.quiz_link:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.quiz_thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.quiz_answer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: wheat;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(101%);
+  transition: transform 250ms var(--transit-function);
+}
+
+.quiz_link:hover .quiz_answer,
+.quiz_link:focus .quiz_answer {
+  transform: translateY(0);
+}
+
+.quiz_box {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+.quiz_description {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  color: rgb(170, 71, 35);
+}
+
+.quiz_items {
+  list-style-type: lower-alpha;
+  font-weight: 700;
+  margin: 20px;
+}
+
+.quiz_item {
+  color: rgb(170, 71, 35);
+  font-weight: normal;
+}
+
+/*footer*/
+footer {
+  padding: 30px 0;
+  background-color: bisque;
+}
+.footer_container {
+  text-align: center;
+}
